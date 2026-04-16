@@ -1,0 +1,46 @@
+(function(){
+var N="5548999923737",MSG="Olá! Tenho interesse em saber mais.",API="https://www.api-contasy.com/crm/lead",X=["/cnae-mei"];
+for(var i=0;i<X.length;i++)if(location.href.indexOf(X[i])!==-1)return;
+function U(){var p=new URLSearchParams(location.search),k=["utm_source","utm_medium","utm_campaign","utm_term","utm_content"],o={};k.forEach(function(x){var v=p.get(x);if(v)try{localStorage.setItem(x,v)}catch(e){};o[x]=v||(localStorage.getItem(x)||"")});return o}
+function MK(v){v=v.replace(/\D/g,"").slice(0,11);return v.length>10?v.replace(/^(\d{2})(\d{5})(\d{0,4}).*/,"($1) $2-$3"):v.length>6?v.replace(/^(\d{2})(\d{4})(\d{0,4}).*/,"($1) $2-$3"):v.length>2?v.replace(/^(\d{2})(\d{0,5}).*/,"($1) $2"):v}
+
+var s='.wB{position:fixed;bottom:24px;right:24px;width:60px;height:60px;border-radius:50%;background:#25D366;box-shadow:0 6px 20px rgba(37,211,102,.4);cursor:pointer;border:0;display:flex;align-items:center;justify-content:center;z-index:99998;transition:transform .2s}.wB:hover{transform:scale(1.08)}.wB svg{width:32px;height:32px;fill:#fff;z-index:2;position:relative}.wB::before{content:"";position:absolute;inset:0;border-radius:50%;background:#25D366;animation:wp 2.4s ease-out infinite}@keyframes wp{0%{transform:scale(1);opacity:.6}80%,100%{transform:scale(1.6);opacity:0}}.wO{position:fixed;inset:0;background:rgba(15,23,42,.6);z-index:99999;display:none;align-items:flex-end;justify-content:center;backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px)}.wO.o{display:flex;animation:wf .25s}@keyframes wf{from{opacity:0}to{opacity:1}}@media(min-width:600px){.wO{align-items:center;padding:16px}}.wM{background:#fff;border-radius:18px 18px 0 0;width:100%;max-width:400px;overflow:hidden;animation:wu .3s cubic-bezier(.16,1,.3,1);font-family:system-ui,sans-serif}@media(min-width:600px){.wM{border-radius:18px}}@keyframes wu{from{transform:translateY(100%)}to{transform:translateY(0)}}.wH{background:linear-gradient(135deg,#25D366,#1da851);color:#fff;padding:20px;position:relative}.wH h3{margin:0 0 4px;font-size:18px;font-weight:600}.wH p{margin:0;font-size:13px;opacity:.95}.wC{position:absolute;top:12px;right:12px;background:rgba(255,255,255,.18);border:0;color:#fff;width:30px;height:30px;border-radius:50%;cursor:pointer;font-size:18px}.wF{padding:20px}.wL{position:relative;margin-bottom:12px}.wL input{width:100%;padding:18px 14px 8px;border:1.5px solid #e2e8f0;border-radius:10px;font-size:15px;box-sizing:border-box;outline:0;font-family:inherit;-webkit-appearance:none}.wL input:focus{border-color:#25D366}.wL input:focus+label,.wL input:not(:placeholder-shown)+label{transform:translateY(-9px) scale(.78);color:#64748b}.wL label{position:absolute;left:14px;top:16px;font-size:15px;color:#94a3b8;pointer-events:none;transform-origin:left top;transition:.15s}.wL.e input{border-color:#ef4444;background:#fef2f2}.wS{width:100%;background:#25D366;color:#fff;border:0;padding:14px;border-radius:10px;font:600 15px system-ui,sans-serif;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;box-shadow:0 4px 12px rgba(37,211,102,.3)}.wS:hover:not(:disabled){background:#1da851}.wS:disabled{opacity:.85;cursor:wait}.wS svg{width:20px;height:20px;fill:#fff}.wSp{width:18px;height:18px;border:2.5px solid rgba(255,255,255,.4);border-top-color:#fff;border-radius:50%;animation:ws .7s linear infinite}@keyframes ws{to{transform:rotate(360deg)}}.wP{text-align:center;font-size:11px;color:#94a3b8;margin:10px 0 0}.wK{padding:36px 22px;text-align:center;display:none}.wK.o{display:block}.wK div{width:60px;height:60px;background:#dcfce7;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 14px}.wK svg{width:30px;height:30px;fill:#25D366}.wK h4{margin:0 0 4px;font-size:17px;color:#0f172a}.wK p{margin:0;font-size:14px;color:#64748b}@media(max-width:480px){.wB{bottom:16px;right:16px;width:56px;height:56px}.wB svg{width:28px;height:28px}}';
+
+var ic='<svg viewBox="0 0 24 24"><path d="M12 2C6.6 2 2.1 6.5 2.1 11.9c0 1.8.5 3.5 1.3 5L2 22l5.3-1.4c1.4.8 3 1.2 4.7 1.2 5.5 0 9.9-4.4 9.9-9.9 0-2.6-1-5.1-2.9-7A9.8 9.8 0 0 0 12 2"/></svg>';
+var h='<button class="wB" id="wB" aria-label="Contato">'+ic+'</button><div class="wO" id="wO"><div class="wM"><div class="wH"><h3>Fale com a gente</h3><p>É rápido. Continuamos no WhatsApp.</p><button class="wC" id="wC">&times;</button></div><form class="wF" id="wF" novalidate><div class="wL"><input type="text" id="wn" placeholder=" " autocomplete="name"><label for="wn">Seu nome</label></div><div class="wL"><input type="tel" id="wp" placeholder=" " autocomplete="tel" inputmode="numeric"><label for="wp">Telefone com DDD</label></div><div class="wL"><input type="email" id="we" placeholder=" " autocomplete="email"><label for="we">E-mail</label></div><button type="submit" class="wS" id="wS">'+ic+'<span>Continuar no WhatsApp</span></button><p class="wP">Seus dados estão seguros.</p></form><div class="wK" id="wK"><div><svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg></div><h4>Tudo certo!</h4><p>Abrindo o WhatsApp...</p></div></div></div>';
+
+var st=document.createElement("style");st.textContent=s;document.head.appendChild(st);
+var dv=document.createElement("div");dv.innerHTML=h;document.body.appendChild(dv);
+
+var $=function(i){return document.getElementById(i)},fb=$("wB"),ov=$("wO"),cb=$("wC"),fm=$("wF"),ok=$("wK"),nE=$("wn"),pE=$("wp"),eE=$("we"),sb=$("wS"),sT=sb.querySelector("span"),sI=sb.querySelector("svg");
+
+function oM(){ov.classList.add("o");document.body.style.overflow="hidden";setTimeout(function(){nE.focus()},300)}
+function cM(){ov.classList.remove("o");document.body.style.overflow="";setTimeout(function(){ok.classList.remove("o");fm.style.display="";sb.disabled=false;sT.textContent="Continuar no WhatsApp";sI.style.display="";var p=sb.querySelector(".wSp");if(p)p.remove()},300)}
+
+fb.onclick=oM;cb.onclick=cM;ov.onclick=function(e){if(e.target===ov)cM()};
+document.addEventListener("keydown",function(e){if(e.key==="Escape"&&ov.classList.contains("o"))cM()});
+
+function sE(e){e.closest(".wL").classList.add("e")}
+function cE(e){e.closest(".wL").classList.remove("e")}
+
+pE.oninput=function(e){e.target.value=MK(e.target.value);cE(pE)};
+nE.oninput=function(){cE(nE)};
+eE.oninput=function(){cE(eE)};
+nE.onblur=function(){if(nE.value&&nE.value.trim().length<2)sE(nE)};
+pE.onblur=function(){if(pE.value&&pE.value.replace(/\D/g,"").length<10)sE(pE)};
+eE.onblur=function(){if(eE.value&&!/^\S+@\S+\.\S+$/.test(eE.value))sE(eE)};
+
+fm.onsubmit=function(e){e.preventDefault();
+var n=nE.value.trim(),em=eE.value.trim(),p=pE.value.replace(/\D/g,""),o=true;
+if(n.length<2){sE(nE);o=false}
+if(p.length<10){sE(pE);o=false}
+if(!/^\S+@\S+\.\S+$/.test(em)){sE(eE);o=false}
+if(!o){var f=fm.querySelector(".wL.e input");if(f)f.focus();return}
+
+sb.disabled=true;sI.style.display="none";sT.textContent="Enviando...";
+var sp=document.createElement("div");sp.className="wSp";sb.insertBefore(sp,sT);
+
+fetch(API,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(Object.assign({name:n,email:em,phone:p},U()))}).catch(function(){}).finally(function(){
+fm.style.display="none";ok.classList.add("o");
+setTimeout(function(){window.open("https://wa.me/"+N+"?text="+encodeURIComponent(MSG),"_blank");setTimeout(cM,1200)},600)})};
+})();
